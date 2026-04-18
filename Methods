@@ -6,11 +6,13 @@ go to tools at the top
 then click hierarchy
 go to the gorilla player under "player" or "player vr controller"
 go to rigidbody and make drag -3 or -2 
+
 ------------------------------------------------------------------------------------------------------------
                                              how to add long arms
   
 level 0 > info > tools > scene hierarchy > click on player VR controller and then go to gorilla player 
 and right click on the local scale on the right and change it to 1.4 - 1.7 for all of the local scale things
+
 ------------------------------------------------------------------------------------------------------------
                                                   SS Stick
 
@@ -18,6 +20,7 @@ In your metadata editor search up slingshot
 Replace slingshot with LBAAK.
 Make sure to have the period at the end of else it will not work
 Save your metadata
+
 ------------------------------------------------------------------------------------------------------------
                                                  Auth method
 
@@ -29,6 +32,7 @@ MAKE SURE you dont take your vr off your head or that the screen doesn’t go bl
 
 open the game and it should be working
 works for apk method
+
 ------------------------------------------------------------------------------------------------------------
                                                 no tag freeze
   
@@ -39,6 +43,7 @@ GorillaPlayer
 GorillaTagger
 Find 'Slow CoolDown'
 set it to 0 
+
 ------------------------------------------------------------------------------------------------------------
                                                  anti quit
 
@@ -47,11 +52,13 @@ Open your unity3d file in uabuea and on globalgamemanagers click info
 Click ctrl + f and search "kick" and delete it
 Second method
 In your level0 scene hierarchy disable gorillaquitbox so when you fall out of the map it wont quit your game
+
 ------------------------------------------------------------------------------------------------------------
                                             how to add pull mod 
 
  On UABEA you need to find gorillaplayer and change the drag to something like 
 -1 is like normal ig and if you want i high pull then do -3 to -10 anything over is like unplayable
+
 ------------------------------------------------------------------------------------------------------------
                                  How to add no hand taps to your modded apk
 level 0
@@ -61,3 +68,79 @@ GorillaPlayer
 GorillaTagger
 find 'Hand Tap Volume'
 set it to a very low volume like 0.00000000001 
+
+------------------------------------------------------------------------------------------------------------
+                                                  big doug
+
+Open level 0
+Go To tools Then scene hierarchy
+Now Try Find “Floating Bug”
+When You Find It, Click It And Edit local scale To 2.5
+
+------------------------------------------------------------------------------------------------------------
+                                              loud hand taps   
+
+level 0
+tools
+scene hierarchy
+GorillaPlayer
+GorillaTagger
+find 'Hand Tap Volume
+change it to a high volume
+then you should be done! 
+
+------------------------------------------------------------------------------------------------------------
+                                              no hand taps
+level 0
+tools
+scene hierarchy
+GorillaPlayer
+GorillaTagger
+find 'Tap CoolDown'
+lower to remove hand tap cooldown
+then you should be done!
+
+------------------------------------------------------------------------------------------------------------
+                                              no slide
+
+Search 'GameObject Slide' in 'Level0/GlobalGameManager'.
+Click 'Edit Data', scroll down, set 'true' to 'false'.
+
+------------------------------------------------------------------------------------------------------------
+                                   how to enable and disable game objects
+
+go to level 0
+click info
+go to any game object
+click on it and press edit data
+scroll all the way to the bottom
+there should be text saying "m_IsActive = false" or "m_IsActive = true"
+change true to false to disable it or false to true to enable it
+
+------------------------------------------------------------------------------------------------------------
+                                               how to add snow
+Level 0 - level - forest - ForestObjects - WeatherDayNight - enable Snow 
+
+------------------------------------------------------------------------------------------------------------
+                                            VERY IMPORTANT FOR LIBS
+const-string v0, "AntiCheatBypass"
+
+invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+
+------------------------------------------------------------------------------------------------------------
+                                              how to hook
+1. when you decompiled your apk go to   smail > com > unity3d > player 
+
+2. click on UnityPlayerActivity.smail and open with note pad 
+
+3. now scroll down until you see .method protected onCreate (landroids/os/Bundle;)V
+.locals 2
+4. now paste your injection bellow that so press enter twice then inject it
+
+5. then save and compile it
+
+6. here are the injection code for your menu
+
+const-string v0, "your-menu"
+
+invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
