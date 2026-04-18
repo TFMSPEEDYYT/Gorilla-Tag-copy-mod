@@ -1,4 +1,11 @@
-                                               How to add fly
+ Link you need:
+https://github.com/nesrak1/UABEA/releases/tag/v8   to open unity assets 
+https://dotnet.microsoft.com/en-us/download/dotnet-framework  need this to run uabea
+https://github.com/mkcs121/APK-Easy-Tool/releases/tag/v1.60   to decompile apk's
+download MetaData String editor aswell 
+------------------------------------------------------------------------------------------------------------
+
+                                              How to add fly
 
 level 0
 click info
@@ -122,7 +129,13 @@ change true to false to disable it or false to true to enable it
 Level 0 - level - forest - ForestObjects - WeatherDayNight - enable Snow 
 
 ------------------------------------------------------------------------------------------------------------
-                                            VERY IMPORTANT FOR LIBS
+                                              How to add no name
+Go into MetaData editor and open the meta data that your gonna add no name to 
+now search "gorilla" it should just be all lower case 
+now click on it and edit 
+remove gorilla and add _____ underscores 
+now click save and delete the original metadata and compile your apk
+------------------------------------------------------------------------------------------------------------                                                                      VERY IMPORTANT FOR LIBS
 const-string v0, "AntiCheatBypass"
 
 invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
@@ -130,13 +143,10 @@ invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 ------------------------------------------------------------------------------------------------------------
                                               how to hook
 1. when you decompiled your apk go to   smail > com > unity3d > player 
-
 2. click on UnityPlayerActivity.smail and open with note pad 
-
 3. now scroll down until you see .method protected onCreate (landroids/os/Bundle;)V
 .locals 2
 4. now paste your injection bellow that so press enter twice then inject it
-
 5. then save and compile it
 
 6. here are the injection code for your menu
